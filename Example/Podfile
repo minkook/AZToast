@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'AZToast_Example' do
+  pod 'AZToast', :path => '../'
+
+  target 'AZToast_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
