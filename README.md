@@ -61,10 +61,11 @@ struct AZToastTheme_Custom: AZToastTheme {
     
     init() { }
 }
-```
 
 // Set Custom Theme
 AZToastConfig.shared.theme = AZToastTheme_Custom()
+
+```
 
 ## Author
 
