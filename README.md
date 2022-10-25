@@ -20,6 +20,51 @@ it, simply add the following line to your Podfile:
 pod 'AZToast'
 ```
 
+## Usage
+
+'''swift
+// Show Toast
+AZToast(text: "토스트 입니다.").show()
+
+// Show Toast & duration
+AZToast(text: "토스트 입니다.").duration(3.0).show()
+
+// Custom Theme
+// Use AZToastTheme protocol
+struct AZToastTheme_Custom: AZToastTheme {
+    var duration: TimeInterval = 1.5
+    
+    var animateDuration: TimeInterval = 0.3
+    
+    var animateType: AZToastThemeAnimate = .slide
+    
+    var backgroundColor: UIColor = .init(red: 0, green: 0, blue: 0, alpha: 0.7)
+    
+    var borderWidth: Double = 1.0
+    
+    var borderColor: UIColor = .black
+    
+    var cornerRadius: Double = 5.0
+    
+    var font: UIFont = UIFont.systemFont(ofSize: 16)
+    
+    var textColor: UIColor = .white
+    
+    var textAlignment: NSTextAlignment = .center
+    
+    var lineSpacing: Double = 5.0
+    
+    var icon: AZToastThemeIcon? = .init(image: UIImage(systemName: "heart"),
+                                        size: CGSize(width: 32, height: 32),
+                                        alignment: .left,
+                                        textSpacing: 10.0)
+    
+    init() { }
+}
+
+// Set Custom Theme
+AZToastConfig.shared.theme = AZToastTheme_Custom()
+
 ## Author
 
 minkook, manguks@gmail.com
