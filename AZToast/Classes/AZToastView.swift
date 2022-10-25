@@ -233,6 +233,31 @@ fileprivate extension AZToastView {
             UIView.animate(withDuration: theme.animateDuration) {
                 self.contentView.transform = .identity
             }
+        case .samD:
+            if #available(iOS 13.0, *) {
+                let duration = theme.animateDuration
+                var count = Int(duration * 10)
+                if count % 2 != 0 { count += 1 }
+                self.contentView.alpha = 0.0
+                UIView.animateKeyframes(withDuration: duration, delay: 0) {
+                    for i in 0..<count {
+                        let st = Double(Double(i) / 10.0)
+                        let d = Double(Double(i+1) / 10.0)
+                        let transform = (i % 2 == 0) ? CATransform3DMakeRotation(.pi, 0, 1, 0) : CATransform3DIdentity
+                        UIView.addKeyframe(withRelativeStartTime: st, relativeDuration: d) {
+                            self.contentView.transform3D = transform
+                        }
+                    }
+                    UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: duration) {
+                        self.contentView.alpha = 1.0
+                    }
+                }
+            } else {
+                self.contentView.alpha = 0.0
+                UIView.animate(withDuration: theme.animateDuration) {
+                    self.contentView.alpha = 1.0
+                }
+            }
         }
     }
     
@@ -261,6 +286,21 @@ fileprivate extension AZToastView {
                 self.contentView.transform = CGAffineTransformMakeScale(0.01, 0.01)
             } completion: { _ in
                 self.removeFromSuperview()
+            }
+        case .samD:
+            if #available(iOS 13.0, *) {
+                UIView.animate(withDuration: theme.animateDuration) {
+                    self.contentView.transform3D = CATransform3DMakeRotation(.pi, 0, 1, 0)
+                    self.contentView.alpha = 0.0
+                } completion: { _ in
+                    self.removeFromSuperview()
+                }
+            } else {
+                UIView.animate(withDuration: theme.animateDuration) {
+                    self.contentView.alpha = 0.0
+                } completion: { _ in
+                    self.removeFromSuperview()
+                }
             }
         }
     }

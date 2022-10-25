@@ -50,6 +50,7 @@ public enum AZToastThemeAnimate {
     case slide
     case pop
     case scale
+    @available(iOS 13.0, *) case samD
 }
 
 public struct AZToastThemeIcon {

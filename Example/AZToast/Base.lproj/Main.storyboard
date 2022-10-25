@@ -28,7 +28,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALX-FI-q8d">
-                                <rect key="frame" x="142.5" y="145" width="90" height="35"/>
+                                <rect key="frame" x="142.5" y="125" width="90" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Custom1"/>
                                 <connections>
@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bd-po-lZ2">
-                                <rect key="frame" x="140.5" y="230" width="94" height="35"/>
+                                <rect key="frame" x="140.5" y="190" width="94" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Custom2"/>
                                 <connections>
@@ -44,24 +44,34 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHN-KR-Hj1">
-                                <rect key="frame" x="140.5" y="315" width="94" height="35"/>
+                                <rect key="frame" x="140.5" y="255" width="94" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Custom3"/>
                                 <connections>
                                     <action selector="custom3ButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HRx-qt-AbA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgX-1k-VbK">
+                                <rect key="frame" x="140.5" y="320" width="94" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Custom4"/>
+                                <connections>
+                                    <action selector="custom4ButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="d2D-8C-xuD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6bd-po-lZ2" firstAttribute="top" secondItem="ALX-FI-q8d" secondAttribute="bottom" constant="50" id="4h6-lt-V5w"/>
+                            <constraint firstItem="6bd-po-lZ2" firstAttribute="top" secondItem="ALX-FI-q8d" secondAttribute="bottom" constant="30" id="4h6-lt-V5w"/>
                             <constraint firstItem="wX6-Ia-c6E" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="8x7-b1-VJw"/>
                             <constraint firstItem="SHN-KR-Hj1" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Azr-x5-CE4"/>
                             <constraint firstItem="wX6-Ia-c6E" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="60" id="BNE-Yi-VMw"/>
+                            <constraint firstItem="sgX-1k-VbK" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Cd0-op-sRb"/>
                             <constraint firstItem="ALX-FI-q8d" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="FK1-9E-Nf5"/>
-                            <constraint firstItem="SHN-KR-Hj1" firstAttribute="top" secondItem="6bd-po-lZ2" secondAttribute="bottom" constant="50" id="PgH-tS-a07"/>
+                            <constraint firstItem="SHN-KR-Hj1" firstAttribute="top" secondItem="6bd-po-lZ2" secondAttribute="bottom" constant="30" id="PgH-tS-a07"/>
                             <constraint firstItem="6bd-po-lZ2" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="gbJ-zR-7SR"/>
-                            <constraint firstItem="ALX-FI-q8d" firstAttribute="top" secondItem="wX6-Ia-c6E" secondAttribute="bottom" constant="50" id="ymA-Ww-c4g"/>
+                            <constraint firstItem="sgX-1k-VbK" firstAttribute="top" secondItem="SHN-KR-Hj1" secondAttribute="bottom" constant="30" id="u7B-SX-30Q"/>
+                            <constraint firstItem="ALX-FI-q8d" firstAttribute="top" secondItem="wX6-Ia-c6E" secondAttribute="bottom" constant="30" id="ymA-Ww-c4g"/>
                         </constraints>
                     </view>
                 </viewController>
