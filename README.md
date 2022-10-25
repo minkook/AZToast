@@ -22,7 +22,7 @@ pod 'AZToast'
 
 ## Usage
 
-'''swift
+```swift
 // Show Toast
 AZToast(text: "토스트 입니다.").show()
 
@@ -61,6 +61,7 @@ struct AZToastTheme_Custom: AZToastTheme {
     
     init() { }
 }
+```
 
 // Set Custom Theme
 AZToastConfig.shared.theme = AZToastTheme_Custom()
