@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +18,56 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wX6-Ia-c6E">
+                                <rect key="frame" x="148" y="60" width="79" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Default"/>
+                                <connections>
+                                    <action selector="defaultButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xtx-HF-JNB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALX-FI-q8d">
+                                <rect key="frame" x="142.5" y="145" width="90" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Custom1"/>
+                                <connections>
+                                    <action selector="custom1ButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Kyu-HZ-ncK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bd-po-lZ2">
+                                <rect key="frame" x="140.5" y="230" width="94" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Custom2"/>
+                                <connections>
+                                    <action selector="custom2ButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="I3K-zq-H7R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHN-KR-Hj1">
+                                <rect key="frame" x="140.5" y="315" width="94" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Custom3"/>
+                                <connections>
+                                    <action selector="custom3ButtonAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HRx-qt-AbA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6bd-po-lZ2" firstAttribute="top" secondItem="ALX-FI-q8d" secondAttribute="bottom" constant="50" id="4h6-lt-V5w"/>
+                            <constraint firstItem="wX6-Ia-c6E" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="8x7-b1-VJw"/>
+                            <constraint firstItem="SHN-KR-Hj1" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Azr-x5-CE4"/>
+                            <constraint firstItem="wX6-Ia-c6E" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="60" id="BNE-Yi-VMw"/>
+                            <constraint firstItem="ALX-FI-q8d" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="FK1-9E-Nf5"/>
+                            <constraint firstItem="SHN-KR-Hj1" firstAttribute="top" secondItem="6bd-po-lZ2" secondAttribute="bottom" constant="50" id="PgH-tS-a07"/>
+                            <constraint firstItem="6bd-po-lZ2" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="gbJ-zR-7SR"/>
+                            <constraint firstItem="ALX-FI-q8d" firstAttribute="top" secondItem="wX6-Ia-c6E" secondAttribute="bottom" constant="50" id="ymA-Ww-c4g"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130" y="-31"/>
         </scene>
     </scenes>
 </document>

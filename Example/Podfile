@@ -1,6 +1,6 @@
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '11.0'
 
 target 'AZToast_Example' do
   pod 'AZToast', :path => '../'
