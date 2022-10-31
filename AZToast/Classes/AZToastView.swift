@@ -18,6 +18,8 @@ final class AZToastView: UIView {
     private var inset: UIEdgeInsets { AZToastConfig.shared.inset }
     private var contentInset: UIEdgeInsets { AZToastConfig.shared.contentInset }
     
+    private var tapClosure: (() -> Void)?
+    
     init(frame: CGRect, text: String) {
         self.text = text
         super.init(frame: frame)
@@ -40,6 +42,13 @@ final class AZToastView: UIView {
         removeFromSuperview()
     }
     
+    func tap(closure: @escaping () -> Void) {
+        contentView.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTap))
+        contentView.addGestureRecognizer(tapGesture)
+        tapClosure = closure
+    }
+    
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         for view in subviews {
             if (view.hitTest(convert(point, to: view), with: event) != nil) {
@@ -51,9 +60,12 @@ final class AZToastView: UIView {
 }
 
 fileprivate extension AZToastView {
-    
     @objc func didFinish() {
         animate_hide()
+    }
+    
+    @objc func didTap() {
+        tapClosure?()
     }
 }
 

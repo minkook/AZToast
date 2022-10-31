@@ -11,6 +11,7 @@ open class AZToast {
     
     private let _text: String
     private var _duration: TimeInterval?
+    private var tapClosure: (() -> Void)?
     
     @discardableResult
     public init(text: String) {
@@ -23,6 +24,11 @@ open class AZToast {
     
     public func duration(_ duration: TimeInterval) -> AZToast {
         _duration = duration
+        return self
+    }
+    
+    public func tap(closure: @escaping () -> Void) -> AZToast {
+        tapClosure = closure
         return self
     }
 }
@@ -40,6 +46,10 @@ fileprivate extension AZToast {
         
         let view = AZToastView(frame: CGRect(origin: .zero, size: window.bounds.size), text: _text)
         window.addSubview(view)
+        
+        if let tapClosure = tapClosure {
+            view.tap { tapClosure() }
+        }
         
         let d = _duration ?? AZToastConfig.shared.theme.duration
         view.show(duration: d)
