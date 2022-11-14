@@ -5,6 +5,12 @@
 [![License](https://img.shields.io/cocoapods/l/AZToast.svg?style=flat)](https://cocoapods.org/pods/AZToast)
 [![Platform](https://img.shields.io/cocoapods/p/AZToast.svg?style=flat)](https://cocoapods.org/pods/AZToast)
 
+
+<p align="center">
+      <img src="https://user-images.githubusercontent.com/2138712/201614979-486514c9-85dc-4743-bee6-5d8b3bbb1f19.gif" alt="AZToast" title="AZToast"> 
+</p>
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

@@ -48,12 +48,12 @@ extension ViewController {
     
     @IBAction func custom3ButtonAction(_ sender: Any) {
         AZToastConfig.shared.theme = AZToastTheme_Custom2()
-        let text = "매우 긴 토스트를 작성 할 것입니다. 그래서 애국가를 적어보았습니다. 그럼 시작하겠습니다. 동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라 만세. 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."
+        let text = "매우 긴 토스트를 작성 하였습니다.\n동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라 만세. 무궁화 삼천리 화려강산 대한사람 대한으로 길이 보전하세."
         AZToast(text: text)
             .duration(5.0)
             .tap {
-            print("Toast Tap Tap")
-        }.show()
+                print("Toast Tap Tap")
+            }.show()
     }
     
     @IBAction func custom4ButtonAction(_ sender: Any) {
